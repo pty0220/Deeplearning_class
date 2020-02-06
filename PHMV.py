@@ -13,10 +13,10 @@ phmv = pd.read_csv('../pre_data/CH1_PHMV.csv')
 ph = phmv.iloc[:, 0].values
 mv = phmv.iloc[:, 1].values
 
-# plt.scatter(ph, mv, marker='.', color='black')
-# plt.xlabel('Ph')
-# plt.ylabel('mV')
-# plt.show()
+plt.scatter(ph, mv, marker='.', color='black')
+plt.xlabel('Ph')
+plt.ylabel('mV')
+plt.show()
 
 
 data = pd.read_csv('../pre_data/CH1_whole_data.csv')

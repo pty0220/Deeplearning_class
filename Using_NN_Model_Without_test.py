@@ -15,7 +15,7 @@ def result_show(idx):
 
 
 # Import and split data
-data = pd.read_csv('../pre_data/CH1_whole_data.csv')
+data = pd.read_csv('../pre_data/dangin_CH3_whole_data.csv')
 time = pd.read_csv('../pre_data/Times.csv')
 
 """Model Building"""
@@ -35,7 +35,8 @@ y_hat = np.round(y_hat[:, 1])
 
 num_plt = 5
 num_plt = num_plt+1
-rand_idx = np.random.randint(0, 1382, size=num_plt)
+#rand_idx = [100, 100, 76, 112, 21, 24]
+rand_idx = np.random.randint(0, 200, size=num_plt)
 
 fig = plt.figure(figsize=(5,10))
 

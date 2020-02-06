@@ -32,14 +32,35 @@ riseTimePD = riseTime[:changeIdx]
 peakNoise = peak[changeIdx:]
 riseTimeNoise = riseTime[changeIdx:]
 
-plt.scatter(peakNoise, riseTimeNoise, marker='x', color='blue')
-plt.scatter(peakPD, riseTimePD, marker='.', color='red')
-
+plt.figure(figsize=(10, 8), facecolor='white')
+plt.scatter(peakNoise, riseTimeNoise, marker='x', color='blue', label = "Noise signal")
+plt.scatter(peakPD, riseTimePD, marker='.', color='red', label = "PD signal")
+plt.legend(loc='upper left')
 plt.xlabel('Peak [mV]')
-plt.ylabel('riseTime [us]')
+plt.ylabel('Rise Time [us]')
+
+
+noiseSample = range(peakNoise.shape[0])
+pdSample = range(peakPD.shape[0])
+
+plt.figure(figsize=(10, 8), facecolor='white')
+# plt.stem(peakNoise, noiseSample, linefmt='blue')
+# plt.stem(peakPD, pdSample, linefmt='red')
+plt.scatter(peakNoise, noiseSample, marker ='x', color='blue', label = 'Noise signal')
+plt.scatter(peakPD, pdSample, marker ='.',color='red', label = "PD signal")
+plt.legend(loc='upper left')
+plt.xlabel('Sampling')
+plt.ylabel('Peak [mV]')
+
+
+plt.figure(figsize=(10, 8), facecolor='white')
+# plt.stem(peakNoise, noiseSample, linefmt='blue')
+# plt.stem(peakPD, pdSample, linefmt='red')
+plt.scatter(riseTimeNoise, noiseSample, marker ='x', color='blue', label = 'Noise signal')
+plt.scatter(riseTimePD, pdSample, marker ='.',color='red', label = "PD signal")
+plt.legend(loc='upper left')
+plt.xlabel('Sampling')
+plt.ylabel('Rise time [mV]')
 plt.show()
-
-
-
 
 a=1

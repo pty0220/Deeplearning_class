@@ -28,12 +28,12 @@ def pre_process_with_PHMV(dir):
 
     return data, PHMV
 
-CH1, PHMV = pre_process_with_PHMV('/Users/home/Desktop/Deep_learning/Data/CH1_CSV')
+CH1, PHMV = pre_process_with_PHMV('/Users/home/Desktop/Deep_learning/Data/Dangin/CH3_CSV')
 
 
 DATA = pd.DataFrame(data = CH1)
-DATA.to_csv("../pre_data/CH1_whole_data.csv", index = False, header = False)
+DATA.to_csv("../pre_data/dangin_CH3_whole_data.csv", index = False, header = False)
 
 DATA = pd.DataFrame(data = PHMV)
-DATA.to_csv("../pre_data/CH1_PHMV.csv", index = False, header = False)
+DATA.to_csv("../pre_data/dangin_CH3_PHMV.csv", index = False, header = False)
 
