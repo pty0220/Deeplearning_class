@@ -20,7 +20,7 @@ from keras.models import load_model
 
 
 # Import and split data
-data = pd.read_csv('../pre_data/PD_Noise_Unknown_labeled.csv')
+data = pd.read_csv('../pre_data/whole_미화123.csv')
 
 
 
@@ -97,5 +97,5 @@ plt.show()
 print(" \n")
 print(" \n")
 
-model.save('../model/test.h5')
+model.save('../model/whole_미화123.h5')
 a=1

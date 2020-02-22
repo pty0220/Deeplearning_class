@@ -7,7 +7,7 @@ from keras.models import load_model
 
 
 
-phmv = pd.read_csv('../pre_data/CH1_PHMV.csv')
+phmv = pd.read_csv('../pre_data/CH2_PHMV.csv')
 
 # Split features and labels
 ph = phmv.iloc[:, 0].values

@@ -15,7 +15,7 @@ def result_show(idx):
 
 
 # Import and split data
-data = pd.read_csv('../pre_data/PD_Noise_Unknown_labeled.csv')
+data = pd.read_csv('../pre_data/whole_미화123.csv')
 time = pd.read_csv('../pre_data/Times.csv')
 
 """Model Building"""
@@ -28,12 +28,12 @@ time = np.squeeze(time)
 
 # Build Neural Network
 
-model = load_model('../model/final_NN_model.h5')
+model = load_model('../model/whole_미화123.h5')
 y_hat = model.predict(x)
 y_hat = np.round(y_hat[:, 1])
 print(metrics.accuracy_score(y_hat,y))
 
-num_plt = 2
+num_plt = 5
 num_plt = num_plt+1
 rand_idx = np.random.randint(0, y_hat.shape[0], size=num_plt)
 

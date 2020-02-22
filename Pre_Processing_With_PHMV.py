@@ -13,7 +13,7 @@ def pre_process_with_PHMV(dir):
     PHMV = np.ones((length,2))
     i = 0
 
-    for dirOne in dir_all:
+    for dirOne in dir_all[:100]:
 
         numbers = re.findall(r'\d+', dirOne)
         PHMV[i,0] = float(numbers[3]) + float(numbers[4])/10
