@@ -11,9 +11,9 @@ l2n = lambda l: np.array(l)
 n2l = lambda n: list(n)
 
 # Import and split data
-dataPath = '../pre_data/PD_Noise_Unknown_labeled.csv'
+dataPath = '../pre_data/whole_마화123.csv'
 
-data = pd.read_csv(dataPath, header = None)
+data = pd.read_csv(dataPath, header = None, engine='python')
 data = data.sort_values(512, ascending=[True])
 
 time = pd.read_csv('../pre_data/Times.csv', header = None)
@@ -38,13 +38,13 @@ riseTimeNoise =[]
 for i in range(len(x)):
     signal = x[i,:]
 
-    peaks, _ = find_peaks(signal, height=maximum[i]*0.1)
+    peaks, _ = find_peaks(signal, height= maximum[i]*0.1)
     firstPeakidx.append(peaks[0])
     peak.append(signal[peaks[0]])
-    plt.plot(signal)
-    plt.plot(firstPeakidx[i], signal[firstPeakidx[i]], "x")
-    plt.plot(np.zeros_like(signal), "--", color="gray")
-    plt.show()
+    # plt.plot(signal)
+    # plt.plot(firstPeakidx[i], signal[firstPeakidx[i]], "x")
+    # plt.plot(np.zeros_like(signal), "--", color="gray")
+    # plt.show()
 
 
 firstPeakidx = np.array(firstPeakidx)

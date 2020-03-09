@@ -15,7 +15,7 @@ def result_show(idx):
 
 
 # Import and split data
-data = pd.read_csv('../pre_data/whole_미화123.csv')
+data = pd.read_csv('../pre_data/whole_마화123.csv' , engine='python')
 time = pd.read_csv('../pre_data/Times.csv')
 
 """Model Building"""
@@ -28,7 +28,7 @@ time = np.squeeze(time)
 
 # Build Neural Network
 
-model = load_model('../model/whole_미화123.h5')
+model = load_model('../model/whole_마화123.h5')
 y_hat = model.predict(x)
 y_hat = np.round(y_hat[:, 1])
 print(metrics.accuracy_score(y_hat,y))
