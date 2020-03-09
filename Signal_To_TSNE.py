@@ -17,7 +17,7 @@ np.random.seed(seed_number)
 # Split features and labels
 x = data.iloc[:, :-1].values
 y = data.iloc[:, -1].values
-
+# tested 
 sample_size = x.shape[0]
 
 model_path = "../model/TSNE"+str(seed_number)+".csv"
